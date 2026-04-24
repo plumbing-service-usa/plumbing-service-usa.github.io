@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://plumbing-service-usa.github.io/sitemap.xml
