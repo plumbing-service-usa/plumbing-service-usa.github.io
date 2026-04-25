@@ -177,21 +177,87 @@ footer{background:var(--dark);color:#c9d1e0;padding:40px 20px 20px}
 .footer-col li{margin-bottom:7px;font-size:.92em}
 .footer-col a{color:#94a3b8;text-decoration:none}
 .footer-bottom{border-top:1px solid #2d3748;padding-top:16px;text-align:center;font-size:.84em;color:#64748b}
-@media(max-width:600px){.hero h1{font-size:1.6em}.hero-cta{flex-direction:column}.cta-banner h2{font-size:1.4em}}
+/* ── Mobile Responsive ── */
+@media(max-width:900px){
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .city-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:768px){
+  .hamburger-call{display:inline-block!important}
+  .nav-links{display:none;position:absolute;top:56px;left:0;right:0;background:var(--primary);flex-direction:column;gap:0;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links li{border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav-links li a{display:block;padding:12px 20px;font-size:1em!important}
+  .nav-links .header-phone-link{margin:8px 16px;display:block;text-align:center}
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;margin-left:8px}
+  .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .site-header{position:sticky;top:0}
+  .header-inner{height:56px;position:relative}
+  .brand{font-size:.92em;max-width:160px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .desktop-call{display:none}
+  .hero{padding:44px 16px 36px}
+  .hero h1{font-size:1.75em}
+  .hero-sub{font-size:1em}
+  .hero-trust{gap:8px}
+  .trust-badge{font-size:.82em;padding:5px 10px}
+  .hero-cta{flex-direction:column;align-items:center}
+  .btn-call,.btn-outline{width:100%;max-width:320px;text-align:center;padding:13px 20px}
+  .section-inner h2{font-size:1.45em}
+  .benefits-grid{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .review-grid{grid-template-columns:1fr}
+  .city-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .cta-banner{padding:40px 16px}
+  .cta-banner h2{font-size:1.5em}
+  .cta-phone-big{font-size:1.4em}
+  section{padding:44px 16px}
+  .faq-list{max-width:100%}
+  .trust-bar-inner{gap:12px}
+  .trust-item{font-size:.85em}
+}
+@media(max-width:480px){
+  .brand{max-width:130px;font-size:.85em}
+  .hero h1{font-size:1.5em}
+  .hero-sub{font-size:.95em}
+  .section-inner h2{font-size:1.3em}
+  .city-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-col{padding-bottom:16px;border-bottom:1px solid #2d3748}
+  .footer-col:last-child{border-bottom:none}
+  .area-tag{font-size:.82em;padding:5px 12px}
+  .cta-banner h2{font-size:1.25em}
+  .cta-phone-big{font-size:1.2em}
+  .sticky-cta a{font-size:.9em;padding:12px 16px}
+  .benefit-card,.service-card,.review-card{padding:18px}
+  section{padding:36px 14px}
+}
+@media(min-width:769px){
+  .hamburger{display:none}
+  .nav-links{display:flex!important}
+}
 </style>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 <header class="site-header" role="banner">
   <div class="header-inner">
-    <a class="brand" href="https://plumbing-service-usa.github.io/plumber-portland-or/" aria-label="Plumbing Repair Services - Home">Plumbing Repair — Portland, OR</a>
-    <nav aria-label="Primary navigation">
-      <ul style="list-style:none;display:flex;gap:16px;align-items:center;margin:0;padding:0">
+    <a class="brand" href="https://plumbing-service-usa.github.io/plumber-portland-or/" aria-label="Plumbing Repair Services - Home">Plumbing Repair</a>
+    <nav aria-label="Primary navigation" style="display:flex;align-items:center;gap:8px">
+      <ul class="nav-links" style="list-style:none;display:flex;gap:16px;align-items:center;margin:0;padding:0">
         <li><a href="https://plumbing-service-usa.github.io/plumber-portland-or/" style="color:rgba(255,255,255,.85);text-decoration:none;font-size:.93em">Home</a></li>
         <li><a href="https://plumbing-service-usa.github.io/plumber-portland-or/emergency-plumbing/" style="color:rgba(255,255,255,.85);text-decoration:none;font-size:.93em">Services</a></li>
         <li><a href="https://plumbing-service-usa.github.io/plumber-portland-or/blog/" style="color:rgba(255,255,255,.85);text-decoration:none;font-size:.93em">Blog</a></li>
-        <li><a href="tel:PHONE_NUMBER" class="header-phone-link" aria-label="Call Plumbing Repair in Portland">&#128222; Call Now</a></li>
+        <li class="desktop-call"><a href="tel:PHONE_NUMBER" class="header-phone-link" aria-label="Call Plumbing Repair in Portland">&#128222; Call Now</a></li>
       </ul>
+      <a href="tel:PHONE_NUMBER" class="header-phone-link hamburger-call" style="display:none" aria-label="Call Now">&#128222; Call</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="var n=document.querySelector('.nav-links');var o=n.classList.toggle('open');this.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </div>
 </header>
@@ -215,12 +281,12 @@ footer{background:var(--dark);color:#c9d1e0;padding:40px 20px 20px}
 </section>
 <section>
   <div class="section-inner">
-    <p class="breadcrumb"><a href="https://plumbing-service-usa.github.io/">Home</a> › <a href="https://plumbing-service-usa.github.io/plumber-portland-or/">Plumbing Repair Portland</a> › Plumbing Repair Tigard</p>
+    <p class="breadcrumb"><a href="https://plumbing-service-usa.github.io/">Home</a> › <a href="https://plumbing-service-usa.github.io/plumber-portland-or/">Plumbing Repair Portland</a> › <a href="https://plumbing-service-usa.github.io/plumber-portland-or/areas/">All Portland Areas</a> › Tigard</p>
     <h2>Professional Plumbing Repair Services in Tigard, Portland</h2>
     <p class="section-sub">Your trusted <strong>plumbing repair</strong> experts in Tigard since 2009</p>
-    <p>When Tigard homeowners need reliable <strong>plumbing repair in Tigard</strong>, our licensed team delivers fast results. We specialize in <strong>plumbing repair tigard</strong> — understanding the unique properties and local requirements of Tigard for service tailored to your neighborhood.</p><br>
-    <p>Our <strong>plumbing repair Tigard</strong> technicians arrive promptly, assess your situation at no charge, and provide a detailed written quote. We've completed hundreds of <strong>plumbing repair</strong> jobs in Tigard and across Portland — always on time, always guaranteed.</p><br>
-    <p>Whether you're in the heart of Tigard or its outskirts, our <strong>plumbing repair tigard</strong> team is fully licensed in Oregon, carries complete liability insurance, and backs every job with a workmanship guarantee.</p><br>
+    <p>When Tigard homeowners need reliable <strong>plumbing repair in Tigard</strong>, our licensed team delivers fast results. We specialize in <strong>plumbing repair tigard</strong> — understanding the unique properties, soil conditions, and local building codes of Tigard to deliver service tailored precisely to your neighborhood.</p><br>
+    <p>Our <strong>plumbing repair Tigard</strong> technicians arrive on time, assess your situation at no charge, and provide a detailed written quote before touching a single pipe. We've completed hundreds of <strong>plumbing repair</strong> jobs across Tigard and the wider Portland metro — every one backed by our satisfaction guarantee.</p><br>
+    <p>From minor faucet drips to full emergency pipe bursts, our <strong>plumbing repair tigard</strong> team handles it all. We are fully licensed in Oregon, carry comprehensive liability insurance, and use only quality-grade parts that meet or exceed OR building code requirements.</p><br>
     <a href="tel:PHONE_NUMBER" class="btn-call" style="font-size:1em">📞 Call Now — Free Plumbing Repair Quote for Tigard</a>
   </div>
 </section>
@@ -250,12 +316,48 @@ footer{background:var(--dark);color:#c9d1e0;padding:40px 20px 20px}
 </section>
 <section class="bg-light">
   <div class="section-inner">
+    <h2>Common Plumbing Problems in Tigard, Portland</h2>
+    <p class="section-sub">Our Tigard technicians see these issues most frequently — here's what to watch for in your home</p>
+    <div class="benefits-grid"><article class="benefit-card"><h3>🧊 Frozen & Burst Pipes</h3><p>Temperature swings stress pipe joints and can cause freezing in poorly insulated areas. Our emergency team responds within 1–2 hours to stop water damage and restore flow safely.</p></article><article class="benefit-card"><h3>🚰 Garbage Disposal Failures</h3><p>Garbage disposal jams, leaks, and motor failures are common in busy kitchens. We repair all major brands and recommend replacements when repair is no longer cost-effective.</p></article><article class="benefit-card"><h3>📋 Permit & Code Violations</h3><p>Unpermitted plumbing work is a common issue discovered during home sales. Our licensed team identifies and corrects code violations with proper documentation for your records.</p></article><article class="benefit-card"><h3>🌊 Whole-Home Repiping</h3><p>If your home has polybutylene, galvanized, or old copper pipes, whole-home repiping prevents cascading failures. We complete most repiping jobs in 1–2 days with minimal disruption.</p></article></div>
+  </div>
+</section>
+<section>
+  <div class="section-inner">
+    <h2>Plumbing Repair Pricing in Tigard, Portland</h2>
+    <p class="section-sub">Transparent, upfront pricing — free written quote before any work starts. No hidden fees, ever.</p>
+    <div style="overflow-x:auto;margin-top:20px">
+      <table style="width:100%;border-collapse:collapse;font-size:.95em">
+        <thead><tr style="background:var(--primary);color:#fff"><th style="padding:12px 16px;text-align:left">Service</th><th style="padding:12px 16px;text-align:left">Typical Price Range</th><th style="padding:12px 16px;text-align:left">Notes</th></tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e2e8f0"><td style="padding:12px 16px">🚿 Drain Cleaning</td><td style="padding:12px 16px"><strong>$109–$325</strong></td><td style="padding:12px 16px">Depends on blockage type &amp; depth</td></tr>
+          <tr style="background:#f8fafc;border-bottom:1px solid #e2e8f0"><td style="padding:12px 16px">🔥 Water Heater Repair</td><td style="padding:12px 16px"><strong>$160–$875</strong></td><td style="padding:12px 16px">Part replacement vs. full unit</td></tr>
+          <tr style="border-bottom:1px solid #e2e8f0"><td style="padding:12px 16px">🔧 Pipe Repair</td><td style="padding:12px 16px"><strong>$190–$775</strong></td><td style="padding:12px 16px">Varies by pipe type &amp; access</td></tr>
+          <tr style="background:#f8fafc;border-bottom:1px solid #e2e8f0"><td style="padding:12px 16px">🚨 Emergency Call-Out</td><td style="padding:12px 16px"><strong>$160–$420</strong></td><td style="padding:12px 16px">After-hours &amp; weekend rates apply</td></tr>
+          <tr><td style="padding:12px 16px">⚙️ Sewer Line Repair</td><td style="padding:12px 16px"><strong>$325–$1,600</strong></td><td style="padding:12px 16px">Inspection required first</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;font-size:.88em;color:#64748b">* Prices are estimates for Tigard, Portland. Final price confirmed in your free written quote. Call <a href="tel:PHONE_NUMBER" style="color:var(--primary)">PHONE_NUMBER</a> for an exact quote.</p>
+  </div>
+</section>
+<section class="bg-light">
+  <div class="section-inner">
+    <h2>How Our Tigard Plumbing Repair Process Works</h2>
+    <p class="section-sub">Simple, transparent, and stress-free — from your first call to job completion</p>
+    <div style="margin-top:24px"><div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:24px"><div style="background:var(--primary);color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1em;flex-shrink:0">1</div><div><strong>Same-Day Scheduling</strong><p style="margin:4px 0 0;color:#4a5568;font-size:.95em">Call us and we schedule a technician to arrive the same day in most cases. For emergencies, we dispatch within the hour.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:24px"><div style="background:var(--primary);color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1em;flex-shrink:0">2</div><div><strong>Transparent Diagnosis</strong><p style="margin:4px 0 0;color:#4a5568;font-size:.95em">Our technician explains the problem in plain language, shows you exactly what is wrong, and outlines your repair options clearly.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:24px"><div style="background:var(--primary);color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1em;flex-shrink:0">3</div><div><strong>Efficient, Clean Work</strong><p style="margin:4px 0 0;color:#4a5568;font-size:.95em">We use professional-grade tools and materials. All work areas are protected with drop cloths and cleaned up completely after the job.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:24px"><div style="background:var(--primary);color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1em;flex-shrink:0">4</div><div><strong>Follow-Up Guarantee</strong><p style="margin:4px 0 0;color:#4a5568;font-size:.95em">Every job is backed by our workmanship guarantee. If anything is not right within 30 days, we return and fix it at no charge.</p></div></div></div>
+    <a href="tel:PHONE_NUMBER" class="btn-call" style="font-size:1em;margin-top:8px">📞 Start Now — Call PHONE_NUMBER</a>
+  </div>
+</section>
+<section>
+  <div class="section-inner">
     <h2>FAQs — Plumbing Repair Tigard, OR</h2>
     <div class="faq-list">
       <div class="faq-item"><div class="faq-q">Do you provide plumbing repair in Tigard? <span>▼</span></div><div class="faq-a">Yes — complete <strong>plumbing repair</strong> services throughout Tigard, Portland, OR. Call <a href="tel:PHONE_NUMBER">PHONE_NUMBER</a> for same-day service.</div></div>
-      <div class="faq-item"><div class="faq-q">How fast can you reach Tigard for emergency plumbing repair? <span>▼</span></div><div class="faq-a">Average <strong>plumbing repair</strong> response time in Tigard: <strong>1–2 hours</strong>. Available 24/7.</div></div>
-      <div class="faq-item"><div class="faq-q">Are your Tigard plumbing repair technicians licensed? <span>▼</span></div><div class="faq-a">Yes — all <strong>plumbing repair</strong> technicians serving Tigard are fully licensed, bonded, and insured in Oregon.</div></div>
-      <div class="faq-item"><div class="faq-q">How much does plumbing repair cost in Tigard? <span>▼</span></div><div class="faq-a">Free written <strong>plumbing repair</strong> quote before any work in Tigard. No hidden fees. Call <a href="tel:PHONE_NUMBER">PHONE_NUMBER</a>.</div></div>
+      <div class="faq-item"><div class="faq-q">How fast can you reach Tigard for emergency plumbing repair? <span>▼</span></div><div class="faq-a">Average <strong>plumbing repair</strong> response time in Tigard: <strong>1–2 hours</strong>. Available 24/7 including weekends and holidays.</div></div>
+      <div class="faq-item"><div class="faq-q">Are your Tigard plumbing repair technicians licensed? <span>▼</span></div><div class="faq-a">Yes — all <strong>plumbing repair</strong> technicians serving Tigard are fully licensed in Oregon, bonded, and insured. We carry comprehensive liability coverage on every job.</div></div>
+      <div class="faq-item"><div class="faq-q">How much does plumbing repair cost in Tigard? <span>▼</span></div><div class="faq-a">Costs vary by job type — see our pricing table above for typical ranges. We always provide a free, itemized written quote for Tigard jobs before any work begins. Call <a href="tel:PHONE_NUMBER">PHONE_NUMBER</a>.</div></div>
+      <div class="faq-item"><div class="faq-q">Do you offer a warranty on plumbing repair work in Tigard? <span>▼</span></div><div class="faq-a">Yes — all plumbing repair work in Tigard is backed by our <strong>30-day workmanship guarantee</strong>. If any issue arises from our work within 30 days, we return and fix it at no charge.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I get a same-day plumbing repair appointment in Tigard? <span>▼</span></div><div class="faq-a">In most cases, yes. We offer <strong>same-day appointments</strong> throughout Tigard and the wider Portland area. Call <a href="tel:PHONE_NUMBER">PHONE_NUMBER</a> early in the day for the best availability.</div></div>
     </div>
   </div>
 </section>
@@ -276,7 +378,7 @@ footer{background:var(--dark);color:#c9d1e0;padding:40px 20px 20px}
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px"><a href="https://plumbing-service-usa.github.io/plumber-portland-or/drain-cleaning/" style="background:var(--light);border:1px solid #cbd5e1;border-radius:8px;padding:10px 16px;text-decoration:none;color:var(--primary);font-weight:600;font-size:.9em">🚿 Drain Cleaning in Tigard</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/water-heater-repair/" style="background:var(--light);border:1px solid #cbd5e1;border-radius:8px;padding:10px 16px;text-decoration:none;color:var(--primary);font-weight:600;font-size:.9em">🔥 Water Heater Repair in Tigard</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/pipe-repair/" style="background:var(--light);border:1px solid #cbd5e1;border-radius:8px;padding:10px 16px;text-decoration:none;color:var(--primary);font-weight:600;font-size:.9em">🔧 Pipe Repair in Tigard</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/leak-detection/" style="background:var(--light);border:1px solid #cbd5e1;border-radius:8px;padding:10px 16px;text-decoration:none;color:var(--primary);font-weight:600;font-size:.9em">💧 Leak Detection in Tigard</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/sewer-line-repair/" style="background:var(--light);border:1px solid #cbd5e1;border-radius:8px;padding:10px 16px;text-decoration:none;color:var(--primary);font-weight:600;font-size:.9em">⚙️ Sewer Line Repair in Tigard</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/emergency-plumbing/" style="background:var(--light);border:1px solid #cbd5e1;border-radius:8px;padding:10px 16px;text-decoration:none;color:var(--primary);font-weight:600;font-size:.9em">🚨 Emergency Plumbing in Tigard</a></div>
   </div>
 </section>
-<section class="bg-light"><div class="section-inner"><h2>Other Areas We Serve Near Tigard</h2><p class="section-sub">We also provide plumbing repair across these Portland neighborhoods</p><div class="area-grid" role="list"><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-downtown/" class="area-tag">Downtown</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-pearl-district/" class="area-tag">Pearl District</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-beaverton/" class="area-tag">Beaverton</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-hillsboro/" class="area-tag">Hillsboro</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-gresham/" class="area-tag">Gresham</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-lake-oswego/" class="area-tag">Lake Oswego</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-milwaukie/" class="area-tag">Milwaukie</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-vancouver/" class="area-tag">Vancouver</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/" class="area-tag">All Portland Areas →</a></div></div></section>
+<section class="bg-light"><div class="section-inner"><h2>Other Areas We Serve Near Tigard</h2><p class="section-sub">We also provide plumbing repair across these Portland neighborhoods</p><div class="area-grid" role="list"><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-downtown/" class="area-tag">Downtown</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-pearl-district/" class="area-tag">Pearl District</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-beaverton/" class="area-tag">Beaverton</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-hillsboro/" class="area-tag">Hillsboro</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-gresham/" class="area-tag">Gresham</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-lake-oswego/" class="area-tag">Lake Oswego</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-milwaukie/" class="area-tag">Milwaukie</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/plumbing-repair-vancouver/" class="area-tag">Vancouver</a><a href="https://plumbing-service-usa.github.io/plumber-portland-or/areas/" class="area-tag" style="background:var(--primary);color:#fff;border-color:var(--primary)">📍 All Portland Areas →</a></div></div></section>
 <section>
   <div class="section-inner">
     <h2>Free Plumbing Repair Guides for Tigard Homeowners</h2>
