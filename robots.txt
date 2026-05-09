@@ -70,4 +70,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://plumbing-service-usa.github.io/sitemap.xml
+Sitemap: https://plumbersinusa.com/sitemap.xml
